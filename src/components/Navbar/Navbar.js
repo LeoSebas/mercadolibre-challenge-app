@@ -12,7 +12,7 @@ export function Navbar() {
   function handleOnClickSearch() {
     const value = inputSearchRef.current.value;
     if (value !== null) {
-      navigate(`items/?search=${value}`);
+      navigate(`items/?search=${value}&page=1`);
     }
   }
 
@@ -23,12 +23,12 @@ export function Navbar() {
   }
 
   return (
-    <nav className="h-[60px] bg-mercadolibre py-0">
+    <nav className="h-[70px] bg-mercadolibre py-0">
       <div className="container h-full mx-auto flex items-center">
         <Link to="/">
           <img className="mr-5" src={Logo} alt="Logo" />
         </Link>
-        <div className="flex w-full">
+        <div className="flex w-full ">
           <input
             id="searchInput"
             name="searchInput"
