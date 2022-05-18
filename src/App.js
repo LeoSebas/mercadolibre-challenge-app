@@ -1,9 +1,17 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { SearchPage } from "./pages/SearchPage/SearchPage";
+import { SearchResultsPage } from "./pages/SearchResultsPage/SearchResultsPage";
 
 export default function App() {
+
+
   return (
-    <div className="container">
-      <h1 className="text-3xl font-bold underline">Preparando la MercadoLibre Challenge App...</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <SearchPage />}/>
+        <Route path="/items" element={ <SearchResultsPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
