@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# MercadoLibre Challenge App
+
+App de busqueda y visualización de articulos estilo MercadoLibre desde la [API de Desarrolladores](https://developers.mercadolibre.com.ar/es_ar/api-docs-es)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
