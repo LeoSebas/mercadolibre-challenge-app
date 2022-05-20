@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Navbar } from "./components/Navbar/Navbar";
+import { NotFound } from "./pages/NotFound/NotFound";
+import { ProductDetailsPage } from "./pages/ProductDetailsPage/ProductDetailsPage";
 import { SearchPage } from "./pages/SearchPage/SearchPage";
 import { SearchResultsPage } from "./pages/SearchResultsPage/SearchResultsPage";
 
@@ -13,6 +15,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={ <SearchPage />}/>
         <Route path="/items" element={ <SearchResultsPage />} />
+        <Route path="/items/:id" element={ <ProductDetailsPage />} />
+        <Route path="*" element= { <NotFound />} />
       </Routes>
     </BrowserRouter>
   );

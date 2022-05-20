@@ -1,4 +1,5 @@
 import { useSearchParams } from "react-router-dom"
+import { ProductList } from "../../components/ProductList/ProductList"
 import { useSearchResults } from "../../hooks/useSearchResults"
 
 export function SearchResultsPage() {
@@ -10,9 +11,9 @@ export function SearchResultsPage() {
 
 
     return (
-        <div className="container">
+        <div className="container mx-auto">
             <h1 className="text-3x1">Resultados de la busqueda</h1>
-            {JSON.stringify(results)}
+            <ProductList products={results}/>
         </div>
     )
 }
